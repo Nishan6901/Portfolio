@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishan - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="Website Icon" type="png" href="lol.png">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="left"><button data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;Portfolio&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;Portfolio&nbsp;</span>
+      </button></div>
+    <button class="btn" type="button">
+      <strong class="contact">Contact</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
+
+      <div id="glow">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </button>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        Hi, I'm <span class="purple"> Nishan </span> And I am a
+        <span id="element"></span>
+
+      </div>
+      <div class="rightsection">
+
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+          <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+          <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+          <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 440" stroke-linecap="round"></circle>
+          <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+
+      </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <hr>
+
+
+  
+  <script>
+     const contactButton = document.querySelector('.contact');
+  contactButton.addEventListener('click', () => {
+    window.location.href = 'contact.html'; // Replace with your desired link
+  });
+  </script>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Student ', 'Web developer'],
+      typeSpeed: 150,
+      loop: true,
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var twitterButton = document.querySelector('.twitter');
+
+      twitterButton.addEventListener('click', function () {
+        window.location.href = 'https://twitter.com/op_revolve5342';
+      });
+    });
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var instButton = document.querySelector('.inst');
+
+      instButton.addEventListener('click', function () {
+        window.location.href = 'https://instagram.com/revolver.opp';
+      });
+    });
+  </script>
+
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var footer = document.querySelector('.lol');
+      var heading = footer.querySelector('h1');
+      var footerPosition = footer.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      if (footerPosition < windowHeight) {
+        heading.style.opacity = 1; // Make the heading visible
+      }
+    });
+
+  </script>
+
+  <script>
+    function scrollToElement(elementId) {
+      var element = document.getElementById(elementId);
+      var footer = document.querySelector('footer');
+      footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+  </script>
+  <script>
+    var underlineText = document.querySelector('.underline-text');
+
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY;
+      var elementPosition = underlineText.offsetTop;
+      var windowHeight = window.innerHeight;
+
+      if (scrollPosition + windowHeight > elementPosition) {
+        underlineText.style.animation = 'underline-animation 2s infinite';
+      } else {
+        underlineText.style.animation = 'none';
+      }
+    });
+
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var hr = document.querySelector('.fade-in-hr');
+      var hrPosition = hr.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      if (hrPosition < windowHeight) {
+        hr.style.opacity = 1;
+      }
+    });
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.querySelector('.btn');
+      var footer = document.querySelector('#footer');
+
+      btn.addEventListener('click', function () {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var line = document.querySelector('.line-animation');
+      var linePosition = line.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      if (linePosition < windowHeight) {
+        line.style.width = '100%';
+        window.removeEventListener('scroll', lineScrollHandler); // Remove the scroll event listener
+      }
+    });
+
+
+  </script>
+ 
+  <script>
+    document.addEventListener('mousemove', function (event) {
+      var wave = document.createElement('div');
+      wave.className = 'wave';
+      wave.style.left = event.clientX + 'px';
+      wave.style.top = event.clientY + 'px';
+      document.body.appendChild(wave);
+
+      setTimeout(function () {
+        wave.remove();
+      }, 1000);
+    });
+
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.querySelector('.btn');
+      var targetElement = document.querySelector('.hyper');
+
+      btn.addEventListener('click', function (event) {
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+  </script>
+</body>
+
+</html>
